@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقایسه استانداردهای جهانی و ایرانی در طراحی ساختمان</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-3d"></script> <!-- افزونه 3D -->
+     <link rel="stylesheet" href="file/engines/chart_1.css">
+</head>
+<body>
+
+    <div class="container">
+    <h1 style="color: #3498db;">جدول نمایش سهم استانداردهای بین المللی و ایرانی در طراحی ساختمان</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>استاندارد</th>
+                    <th>نوع استاندارد</th>
+                    <th>سهم درصد</th>
+                    <th>رنگ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ISO (International Organization for Standardization)</td>
+                    <td>جهانی</td>
+                    <td>15%</td>
+                    <td style="background-color:#FF6384;"></td>
+                </tr>
+                <tr>
+                    <td>International Code Council (ICC)</td>
+                    <td>جهانی</td>
+                    <td>10%</td>
+                    <td style="background-color:#36A2EB;"></td>
+                </tr>
+                <tr>
+                    <td>ASTM International</td>
+                    <td>جهانی</td>
+                    <td>10%</td>
+                    <td style="background-color:#FFCE56;"></td>
+                </tr>
+                <tr>
+                    <td>CEN (European Committee for Standardization)</td>
+                    <td>جهانی</td>
+                    <td>10%</td>
+                    <td style="background-color:#FF9F40;"></td>
+                </tr>
+                <tr>
+                    <td>BSI (British Standards Institution)</td>
+                    <td>جهانی</td>
+                    <td>5%</td>
+                    <td style="background-color:#4BC0C0;"></td>
+                </tr>
+                <tr>
+                    <td>NFPA (National Fire Protection Association)</td>
+                    <td>جهانی</td>
+                    <td>10%</td>
+                    <td style="background-color:#9966FF;"></td>
+                </tr>
+                <tr>
+                    <td>استانداردهای ملی ایران (ISIRI)</td>
+                    <td>ایرانی</td>
+                    <td>10%</td>
+                    <td style="background-color:#FF33CC;"></td>
+                </tr>
+                <tr>
+                    <td>مقررات ملی ساختمان (ایران)</td>
+                    <td>ایرانی</td>
+                    <td>20%</td>
+                    <td style="background-color:#FF3366;"></td>
+                </tr>
+                <tr>
+                    <td>استاندارد 2800 (مقاومت در برابر زلزله)</td>
+                    <td>ایرانی</td>
+                    <td>10%</td>
+                    <td style="background-color:#33CCFF;"></td>
+                </tr>
+                <tr>
+                    <td>استانداردهای طراحی سازه‌های بتنی</td>
+                    <td>ایرانی</td>
+                    <td>5%</td>
+                    <td style="background-color:#FFD700;"></td>
+                </tr>
+                <tr>
+                    <td>استانداردهای مصالح ساختمانی (ایران)</td>
+                    <td>ایرانی</td>
+                    <td>5%</td>
+                    <td style="background-color:#FF6600;"></td>
+                </tr>
+                <tr>
+                    <td>استانداردهای معماری و طراحی فضای داخلی (ایران)</td>
+                    <td>ایرانی</td>
+                    <td>10%</td>
+                    <td style="background-color:#00FF00;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+    <h1 style="color: #9097FF;">نمودار نمایش سهم استانداردهای بین المللی و ایرانی در طراحی ساختمان</h1>
+
+        <div class="chart-container">
+            <canvas id="my3DPieChart"></canvas>
+        </div>
+    </div>
+<script  src="file/engines/chart_1.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+ @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: -8px;
+   background: #e0e5ec;
+}
+p {
+  margin: 0em 1em 1em 1em;
+  font-size: 1.5rem;
+}
+
+h1, p {
+  text-align: right;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+}
+
+.glowIn {
+  color: #529291;
+}
+
+.glowIn span {
+  animation: glow-in 0.8s both;
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+    text-shadow: 0 0 25px white;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+.card {
+    position: relative; /* برای استفاده از z-index */
+    width: 90%;
+    max-width: 1200px;
+    background-color:rgb(224, 229, 236);
+   
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+   box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+    font-size: 1rem;
+}
+
+
+    .my-iframe-class {
+      width: 48%;
+      height: 200px;
+      border: none;
+      margin: 10px;
+      border-radius: 100px 10px 100px 10px;
+       box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+    }
+	 .title-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 20px;
+      flex: 1;
+      text-align: right;
+      direction: rtl;
+    }
+	  /* بخش لوگو بالای عنوان و کنار آیفریم */
+    .logo-container {
+      position: flex;
+      top: -10px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+    }
+
+    .logo-container svg {
+      width: 60px;
+      height: 60px;
+      fill: white; /* رنگ لوگو */
+    }
+.evenodd {
+    stroke:#00acee;
+    stroke-width:3;
+    fill:  #20c1ff;#77c5d4;
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+    animation: show 5s ease-in-out infinite;
+  }
+  @keyframes show{
+    0%{
+      fill: transparent;
+      stroke-dashoffset: 1800;
+    }100%{
+      fill: #000000db
+      stroke-dashoffset: 0;
+    }
+  } 
+	 @keyframes show{
+    0%{
+      fill: transparent;
+      stroke-dashoffset: 1800;
+    }100%{
+      fill: #000000db
+      stroke-dashoffset: 0;
+    }
+  }  
+  .frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 260px;
+  position: relative;
+   box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+ transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+   border-radius: 10px;
+}
+
+.btn{
+  height: 35px;
+  width: 35px;
+  border-radius: 3px;
+  background: #e0e5ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+ transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+  font-size: 16px;
+  color: rgba(42, 52, 84, 1);
+  text-decoration: none;
+}
+.btn:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+.close-btn {
+    background: none;
+    border: none;
+    color: #ff0000;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.share-options {
+  display: none;
+  position: absolute;
+  background-color: #6c8aff12;
+  border: 1px solid #cafaffb8;
+  border-radius: 200px;
+  padding: 30px;
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+
+.share-options a {
+    display: inline-block; /* تغییر به inline-block برای نمایش در یک ردیف */
+    margin: 0 5px; /* فاصله افقی بین آیکون‌ها */
+    text-decoration: none;
+    color: #3b1dff;
+}
+
+        .share-options i {
+            margin-left: 5px; /* فاصله بین آیکون و متن */
+        }
+		.modal {
+    display: none; /* پاپ‌آپ به طور پیش‌فرض مخفی است */
+    position: fixed; /* ثابت در کل صفحه */
+    z-index: 1000; /* بالاترین اولویت برای نمایش روی دیگر محتوا */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* مخفی کردن اسکرول اضافی */
+    background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه نیمه شفاف */
+    backdrop-filter: blur(5px); /* افزودن افکت تاری به پس‌زمینه (اختیاری) */
+}
+
+  .modal-content {
+    background-color:  #00c3ff1f; /* رنگ پس‌زمینه */
+    margin: 5% auto; /* فاصله از بالا و تراز افقی */
+    padding: 20px;
+    border-radius: 12px; /* لبه‌های گرد */
+    width: 100%; /* عرض نسبی پاپ‌آپ */
+    height: 100%; /* ارتفاع نسبی پاپ‌آپ */
+    max-width: 900px; /* محدودیت حداکثر عرض */
+    max-height: 700px; /* محدودیت حداکثر ارتفاع */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* سایه زیبا */
+    position: relative;
+    overflow-y: auto; /* اسکرول عمودی در صورت محتوای زیاد */
+}
+/* پس‌زمینه مودال با شفافیت */
+.accordion-panel {
+  display: none; /* به صورت پیش‌فرض مخفی است */
+  position: fixed; /* ثابت در صفحه */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(151, 0, 255, 0.36); /* پس‌زمینه شفاف سیاه */
+  backdrop-filter: blur(2px);
+  justify-content: center; /* محتوای داخل را در وسط قرار می‌دهد */
+  align-items: center; /* عمودی مرکزچینی */
+  z-index: 9999; /* اطمینان از اینکه پنل بالاتر از دیگر عناصر باشد */
+}
+
+/* پنل محتوا */
+.panel-content {
+  background-color:  #0028ff70; /* پس‌زمینه سفید */
+  padding: 20px;
+  border-radius: 10px; /* گوشه‌های گرد */
+  width: 80%;
+  max-width: 500px; /* حداکثر عرض */
+  text-align: center; /* متن را وسط چین می‌کند */
+  position: relative; /* برای قرار دادن دکمه بسته در موقعیت صحیح */
+}
+
+/* نوشته بالای پنل */
+.panel-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px; /* فاصله بین نوشته و دکمه‌ها */
+}
+
+/* دکمه‌ها در یک ردیف */
+.os-buttons {
+  display: flex;
+  justify-content: space-evenly; /* فاصله یکنواخت بین دکمه‌ها */
+  gap: 10px;
+}
+
+/* استایل دکمه‌ها */
+.btn-os {
+  padding: 10px;
+  background-color: #a300ffa6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.btn-os i {
+  margin-right: 5px;
+}
+
+.btn-os:hover {
+  background-color: #0056b3;
+}
+
+/* دکمه بسته شدن */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
