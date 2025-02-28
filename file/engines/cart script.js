@@ -171,7 +171,7 @@ function openModal(url) {
   const iframe = modal.querySelector("iframe");
 
   if (modal && iframe) {
-    iframe.src = `https://srswebsite.github.io/app/form/bussiness%20form.html`;  // تغییر URL iframe
+    iframe.src = `https://srswebsite.github.io/app/form/SRS_form.html`;  // تغییر URL iframe
     modal.style.display = "block"; // نمایش پاپ‌آپ
   }
 }
