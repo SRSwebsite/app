@@ -1,5 +1,5 @@
 // تعریف URL اکشن به صورت امن
-const scriptURL = "https://script.google.com/macros/s/AKfycbx1PO7-_9ZxfZu8AOoLSDCjSEnkf2bqM0ZdwGQiiu5v1XNXDi_EmIx37jwcrZqdy6Vf/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbwsLB6wd8WEOSnHsD27JiEBNgjv22Ov6VzxsEI71AFwXklDZr-xpwN1ZgPxR9UzB9bI/exec";
 
 // تابع برای دریافت آدرس IP
 async function getIPAddress() {
