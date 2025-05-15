@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پنل مدیریتی پروژه ساختمانی</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="flex flex-col md:flex-row min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-full md:w-64 bg-white shadow-md p-4">
+      <h1 class="text-2xl font-bold mb-6 flex items-center gap-2 text-blue-600">
+        🏗️ پنل پروژه ساختمانی
+      </h1>
+	  
+      <ul class="space-y-3">
+	  
+        <li><a href="#" class="block py-2 px-4 rounded-lg hover:bg-blue-100">داشبورد</a></li>
+        <li><a href="#" class="block py-2 px-4 rounded-lg hover:bg-blue-100">نمودارها</a></li>
+        <li><a href="#" class="block py-2 px-4 rounded-lg hover:bg-blue-100">گزارش‌ها</a></li>
+        <li><a href="#" class="block py-2 px-4 rounded-lg hover:bg-blue-100">تنظیمات</a></li>
+		<li><a href="https://srswebsite.github.io/app/proff.html" class="block py-2 px-4 rounded-lg hover:bg-blue-100">پروتفولیو</a></li>
+      </ul>
+    </aside>
+<!-- WebGL iframe Centered -->
+      <div class="xl:col-span-3 bg-white shadow rounded-2xl p-4">
+        <h2 class="text-lg font-semibold mb-2">نمای ۳بعدی ساختمان</h2>
+        <div class="w-full h-[400px]">
+          <iframe src="https://srswebsite.github.io/app/logo/index.html" class="w-full h-full rounded-xl border" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 grid grid-cols-1 xl:grid-cols-3 gap-6">
+
+      <!-- Bar Chart -->
+      <div class="bg-white shadow rounded-2xl p-4">
+        <h2 class="text-lg font-semibold mb-2">پیشرفت مراحل</h2>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <!-- Pie Chart -->
+      <div class="bg-white shadow rounded-2xl p-4">
+        <h2 class="text-lg font-semibold mb-2">توزیع وظایف</h2>
+        <canvas id="pieChart"></canvas>
+      </div>
+
+      <!-- Line Chart -->
+      <div class="bg-white shadow rounded-2xl p-4">
+        <h2 class="text-lg font-semibold mb-2">پیشرفت ماهانه</h2>
+        <canvas id="lineChart"></canvas>
+      </div>
+
+      
+      <!-- Table 1 -->
+      <div class="bg-white shadow rounded-2xl p-4 xl:col-span-2">
+        <h2 class="text-lg font-semibold mb-4">گزارش وظایف</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="px-4 py-2 text-right">#</th>
+                <th class="px-4 py-2 text-right">عنوان</th>
+                <th class="px-4 py-2 text-right">وضعیت</th>
+                <th class="px-4 py-2 text-right">پیشرفت</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="px-4 py-2">1</td>
+                <td class="px-4 py-2">فونداسیون</td>
+                <td class="px-4 py-2 text-green-600">تمام‌شده</td>
+                <td class="px-4 py-2">100%</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-4 py-2">2</td>
+                <td class="px-4 py-2">اسکلت</td>
+                <td class="px-4 py-2 text-yellow-600">در حال انجام</td>
+                <td class="px-4 py-2">60%</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2">3</td>
+                <td class="px-4 py-2">سقف</td>
+                <td class="px-4 py-2 text-red-600">در انتظار</td>
+                <td class="px-4 py-2">0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table 2 -->
+      <div class="bg-white shadow rounded-2xl p-4">
+        <h2 class="text-lg font-semibold mb-4">کارکنان</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="px-4 py-2 text-right">نام</th>
+                <th class="px-4 py-2 text-right">نقش</th>
+                <th class="px-4 py-2 text-right">وضعیت</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="px-4 py-2">علی رضایی</td>
+                <td class="px-4 py-2">مهندس ناظر</td>
+                <td class="px-4 py-2 text-green-600">فعال</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2">سارا محمدی</td>
+                <td class="px-4 py-2">مدیر پروژه</td>
+                <td class="px-4 py-2 text-green-600">فعال</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Chart Initialization -->
+  <script>
+    new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      data: {
+        labels: ['فونداسیون', 'اسکلت', 'سقف'],
+        datasets: [{
+          label: 'پیشرفت (%)',
+          data: [100, 60, 0],
+          backgroundColor: ['#3b82f6', '#f59e0b', '#ef4444'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } }
+      }
+    });
+
+    new Chart(document.getElementById('pieChart'), {
+      type: 'pie',
+      data: {
+        labels: ['تمام‌شده', 'در حال انجام', 'در انتظار'],
+        datasets: [{
+          data: [40, 30, 30],
+          backgroundColor: ['#10b981', '#f59e0b', '#ef4444']
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    new Chart(document.getElementById('lineChart'), {
+      type: 'line',
+      data: {
+        labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر'],
+        datasets: [{
+          label: 'پیشرفت پروژه',
+          data: [10, 30, 55, 80],
+          fill: true,
+          borderColor: '#3b82f6',
+          backgroundColor: 'rgba(59,130,246,0.1)',
+          tension: 0.4
+        }]
+      },
+      options: { responsive: true }
+    });
+  </script>
+</body>
+</html>
